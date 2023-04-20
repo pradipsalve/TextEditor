@@ -16,7 +16,7 @@ public class TextEditor implements ActionListener {
     JMenu file, edit;
     JMenuItem newfile, openfile,savefile;
     //edit menu item
-    JMenuItem cut, copy,paste,selectAll,close;
+    JMenuItem cut, copy, paste, selectAll,close;
 
     JTextArea textArea;
     TextEditor() {
@@ -79,7 +79,7 @@ public class TextEditor implements ActionListener {
 
         frame.setJMenuBar(menuBar);
 
-          // crate contenet panel
+          // create content panel
 
         JPanel panel= new JPanel();
         panel.setBorder(new EmptyBorder( 5, 5,5,5));
@@ -121,12 +121,12 @@ public class TextEditor implements ActionListener {
       }
       if(actionEvent.getSource()==paste){
 
-          //perform paste openration
+          //perform paste operation
           textArea.paste();
       }
       if(actionEvent.getSource()==selectAll){
 
-          //perform selectall openration
+          //perform selectall operation
           textArea.selectAll();
       }
       if(actionEvent.getSource()==close){
@@ -137,7 +137,7 @@ public class TextEditor implements ActionListener {
           int chooseOption=fileChooser.showOpenDialog(null);
           if(chooseOption==JFileChooser.APPROVE_OPTION){
 
-              // getting the sellectd file
+              // getting the selected file
 
             File file = fileChooser.getSelectedFile();
             //get the path of selected file
